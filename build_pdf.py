@@ -315,9 +315,6 @@ for sec in sections:
         processed = convert_fn_markers(para)
         html_parts.append(f'<p class="body-text">{processed}</p>')
 
-# Word count
-html_parts.append('<p class="wordcount">- 正文約2,994字 -</p>')
-
 # ── Footnotes ──
 html_parts.append('<div class="footnotes">')
 html_parts.append('<h2 class="fn-heading">注釋</h2>')
