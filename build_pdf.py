@@ -117,16 +117,10 @@ html_parts.append('''<!DOCTYPE html>
     margin: 62pt 75pt 72pt 75pt;
 
     @top-left {
-        content: "中國文化研究所學報  第80期（2025年1月）";
-        font-family: "Noto Sans CJK SC", sans-serif;
-        font-size: 8pt;
-        color: #333;
+        content: "";
     }
     @top-right {
-        content: "姜欢耘";
-        font-family: "Noto Sans CJK SC", sans-serif;
-        font-size: 8pt;
-        color: #333;
+        content: "";
     }
     @bottom-center {
         content: counter(page);
@@ -305,9 +299,7 @@ p.bib-item {
 ''')
 
 # ── First page ──
-html_parts.append('<div class="doi-line">DOI: 10.0000/JCS.CUHK.202501_(80).XXXX</div>')
 html_parts.append(f'<h1 class="title">{title}</h1>')
-html_parts.append('<p class="author">姜欢耘<sup class="fn-ref"><a href="#fn-author">*</a></sup></p>')
 
 # Abstract block
 html_parts.append('<div class="abstract">')
@@ -324,16 +316,11 @@ for sec in sections:
         html_parts.append(f'<p class="body-text">{processed}</p>')
 
 # Word count
-html_parts.append('<p class="wordcount">- 正文約3,100字 -</p>')
+html_parts.append('<p class="wordcount">- 正文約2,994字 -</p>')
 
 # ── Footnotes ──
 html_parts.append('<div class="footnotes">')
 html_parts.append('<h2 class="fn-heading">注釋</h2>')
-
-# Author footnote
-html_parts.append('<div class="fn-item" id="fn-author">')
-html_parts.append('<p class="fn-text"><span class="fn-marker">*</span> 姜欢耘，香港中文大學中國文化研究所，學生證號：1155233165。</p>')
-html_parts.append('</div>')
 
 for i, fn in enumerate(fn_data):
     # Remove the marker from text, we add it back
